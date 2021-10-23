@@ -6,8 +6,6 @@ import LoginScreen from './screens/LoginScreen'
 import EventCreateScreen from './screens/EventCreateScreen'
 import EndGameScreen from './screens/EndGameScreen'
 import ChartingScreen from './screens/ChartingScreen'
-// import PitchChartNavigator from './navigation/PitchChartNavigator'
-// import { useScreens } from 'react-native-screens'
 
 // useScreens()
 
