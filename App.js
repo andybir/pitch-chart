@@ -7,8 +7,6 @@ import EventCreateScreen from './screens/EventCreateScreen'
 import EndGameScreen from './screens/EndGameScreen'
 import ChartingScreen from './screens/ChartingScreen'
 
-// useScreens()
-
 const Stack = createNativeStackNavigator()
 
 export default function App() {
