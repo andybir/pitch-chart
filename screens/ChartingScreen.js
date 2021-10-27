@@ -7,7 +7,7 @@ const ChartingScreen = ({ navigation }) => {
       <Text>Charting Screen</Text>
       <Button
         title='Go to End Game Screen'
-        onPress={() => navigation.navigate('End Game Screen')}
+        onPress={() => navigation.navigate('End Game')}
       />
     </View>
   )

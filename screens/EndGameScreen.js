@@ -6,8 +6,8 @@ const EndGameScreen = ({ navigation }) => {
     <View style={styles.screen}>
       <Text>End Game Screen</Text>
       <Button
-        title='Create New Event'
-        onPress={() => navigation.navigate('Event Create')}
+        title='Home'
+        onPress={() => navigation.popToTop('Home')}
       />
     </View>
   )

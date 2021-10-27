@@ -1,15 +1,10 @@
 import React from 'react'
 import { View, StyleSheet, Text, Button, TextInput } from 'react-native'
 
-const CreateEventScreen = ({ navigation }) => {
+const PitchersScreen = ({ navigation }) => {
   return (
     <View style={styles.screen}>
-      <Text>Event Create Screen</Text>
-
-      <Button
-        title='Go to Charting Screen'
-        onPress={() => navigation.navigate('Charting')}
-      />
+      <Text>Pitchers Screen</Text>
     </View>
   )
 }
@@ -23,4 +18,4 @@ styles = StyleSheet.create({
   },
 })
 
-export default CreateEventScreen
+export default PitchersScreen

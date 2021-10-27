@@ -1,15 +1,12 @@
 import React from 'react'
 import { View, StyleSheet, Text, Button, TextInput } from 'react-native'
 
-const CreateEventScreen = ({ navigation }) => {
+const EventsScreen = ({navigation, props}) => {
   return (
     <View style={styles.screen}>
-      <Text>Event Create Screen</Text>
+      <Text>Events Screen</Text>
 
-      <Button
-        title='Go to Charting Screen'
-        onPress={() => navigation.navigate('Charting')}
-      />
+      
     </View>
   )
 }
@@ -23,4 +20,4 @@ styles = StyleSheet.create({
   },
 })
 
-export default CreateEventScreen
+export default EventsScreen
