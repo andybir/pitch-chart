@@ -1,10 +1,36 @@
 import React from 'react'
-import { View, StyleSheet, Text, Button, TextInput } from 'react-native'
+import {
+  View,
+  StyleSheet,
+  Text,
+  Button,
+  TextInput,
+  FlatList,
+} from 'react-native'
+
+import PitcherTile from '../components/PitcherTile'
+import { PITCHERS } from '../data/dummy-data'
+
+const renderPitcherItem = (itemData) => {
+  return (
+    <PitcherTile
+      name={itemData.item.name}
+      birthday={itemData.item.birthday}
+      handedness={itemData.item.handedness}
+    />
+  )
+}
 
 const PitchersScreen = ({ navigation }) => {
   return (
     <View style={styles.screen}>
-      <Text>Pitchers Screen</Text>
+      <FlatList
+        keyExtractor={(item, index) => {
+          item.id
+        }}
+        data={PITCHERS}
+        renderItem={renderPitcherItem} numColumns={1}
+      />
     </View>
   )
 }

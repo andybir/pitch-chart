@@ -1,12 +1,36 @@
 import React from 'react'
-import { View, StyleSheet, Text, Button, TextInput } from 'react-native'
+import {
+  View,
+  StyleSheet,
+  Text,
+  Button,
+  TextInput,
+  FlatList,
+} from 'react-native'
 
-const EventsScreen = ({navigation, props}) => {
+import EventTile from '../components/EventTile'
+import { EVENTS } from '../data/dummy-data'
+
+const renderEventItem = (itemData) => {
+  return (
+    <EventTile
+      date={itemData.item.date}
+      location={itemData.item.location}
+      chartedBy={itemData.item.chartedBy}
+      batter={itemData.item.batter}
+      pitcher={itemData.item.pitcher}
+    />
+  )
+}
+
+const EventsScreen = ({ navigation, props }) => {
   return (
     <View style={styles.screen}>
-      <Text>Events Screen</Text>
-
-      
+      <FlatList
+        keyExtractor={(item, index) => item.eventId}
+        data={EVENTS}
+        renderItem={renderEventItem}
+      />
     </View>
   )
 }

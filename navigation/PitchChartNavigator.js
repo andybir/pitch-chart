@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator()
 
 const PitchChartNavigator = (props) => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerShown: false}} >
       <Stack.Screen name='Create Event' component={EventCreateScreen} />
       <Stack.Screen name='Charting' component={ChartingScreen} />
       <Stack.Screen name='End Game' component={EndGameScreen} />

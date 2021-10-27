@@ -1,10 +1,34 @@
 import React from 'react'
-import { View, StyleSheet, Text, Button, TextInput } from 'react-native'
+import {
+  View,
+  StyleSheet,
+  
+  FlatList,
+} from 'react-native'
 
-const BattersScreen = ({navigation}) => {
+import BatterTile from '../components/BatterTile'
+import { BATTERS } from '../data/dummy-data'
+
+const renderBatterItem = (itemData) => {
+  return (
+    <BatterTile
+      name={itemData.item.name}
+      birthday={itemData.item.birthday}
+      handedness={itemData.item.handedness}
+    />
+  )
+}
+
+const BattersScreen = ({ navigation }) => {
   return (
     <View style={styles.screen}>
-      <Text>Batters Screen</Text>
+      <FlatList
+        keyExtractor={(item, index) => {
+          item.id
+        }}
+        data={BATTERS}
+        renderItem={renderBatterItem}
+      />
     </View>
   )
 }

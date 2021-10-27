@@ -2,6 +2,7 @@ class Event {
   constructor(
     eventId,
     date,
+    location,
     chartedBy,
     batter,
     batterBDay,
@@ -12,6 +13,7 @@ class Event {
   ) {
     this.eventId = eventId
     this.date = date
+    this.location = location
     this.chartedBy = chartedBy
     this.batter = batter
     this.batterBDay = batterBDay

@@ -30,8 +30,6 @@ const BottomTabs = (props) => {
           } else if (route.name === 'Pitchers') {
             iconName = focused ? 'body' : 'body-outline'
           }
-
-          // You can return any component that you like here!
           return <Ionicons name={iconName} size={size} color={color} />
         },
         tabBarActiveTintColor: colors.primary,
